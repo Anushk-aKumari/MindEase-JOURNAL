@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Journal - MindEase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="scripts/firebase-init.js" defer></script>
+  <script type="module" src="scripts/nav.js" defer></script>
+  <script type="module" src="scripts/journal.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">MindEase</a>
+    <nav>
+      <a href="login.html" class="nav-btn" id="loginLink">Login</a>
+      <a href="register.html" class="nav-btn" id="registerLink">Register</a>
+      <button class="nav-btn logout-btn hidden" id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="journal-main">
+    <div class="journal-layout">
+
+      <!-- Left Side -->
+      <div class="journal-input">
+        <h2>How are you feeling today?</h2>
+        <div class="mood-options">
+          <button class="mood-btn" data-mood="Happy">Happy</button>
+          <button class="mood-btn" data-mood="Neutral">Neutral</button>
+          <button class="mood-btn" data-mood="Sad">Sad</button>
+          <button class="mood-btn" data-mood="Anxious">Anxious</button>
+        </div>
+
+        <h3>Your Journal</h3>
+        <textarea id="journalEntry" placeholder="Start writing..."></textarea>
+        <button id="saveEntryBtn" class="primary-btn">Save Entry</button>
+      </div>
+
+      <!-- Right Side -->
+      <div class="journal-meta">
+        <div class="meta-box">
+          <p><strong>Date:</strong> <span id="entryDate"></span></p>
+          <p><strong>Word Count:</strong> <span id="wordCount">0</span></p>
+        </div>
+        <p id="saveMessage" class="save-msg hidden">Entry saved successfully.</p>
+        <div class="journal-history">
+            <h3>Your Past Entries</h3>
+            <div id="entryList" class="entry-list">
+                <!-- Entries will be dynamically populated here -->
+            </div>
+        </div>
+        <section class="mood-graph">
+            <h2>Mood Trend</h2>
+            <canvas id="moodChart" height="200"></canvas>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindEase Journal. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MindEase Journal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="scripts/index.js" defer></script>
+  <script type="module" src="scripts/nav.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">MindEase</a>
+    <nav>
+      <a href="login.html" class="nav-btn">Login</a>
+      <a href="register.html" class="nav-btn">Register</a>
+      <button class="nav-btn logout-btn hidden" id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+        <h1>Your Space to Reflect and Reconnect</h1>
+        <p>MindEase is a private AI-powered journal designed to support your emotional well-being. Write freely, track your mood, and receive thoughtful reflections that help you grow.</p>
+        <button id="journalBtn" class="primary-btn">Go to Journal</button>
+        <p id="loginPrompt" class="hidden">Please login or register to access your journal.</p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/Mentalhealth.png" alt="MindEase Journal">
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <h2>Why MindEase?</h2>
+        <p>In a fast-paced world, taking time to care for your mind is essential. MindEase offers a calming space to express your thoughts, understand your feelings, and build emotional clarity — all in complete privacy.</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container features-grid">
+        <div class="feature-box">
+          <h3>Secure & Private</h3>
+          <p>Your entries are stored safely and are accessible only to you.</p>
+        </div>
+        <div class="feature-box">
+          <h3>AI Reflection</h3>
+          <p>Receive thoughtful, non-judgmental responses powered by AI to help you reflect deeper.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Mood Tracking</h3>
+          <p>Track how you're feeling over time and notice emotional patterns.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Start Journaling with MindEase</h2>
+        <p>Take the first step toward clarity, calm, and self-awareness. Your journal is waiting.</p>
+        <a href="register.html" class="primary-btn">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindEase Journal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
